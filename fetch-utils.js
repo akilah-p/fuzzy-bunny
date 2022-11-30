@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // Create your own supabase database using the provided seeds.sql file
 const SUPABASE_URL = 'https://nwxkvnsiwauieanvbiri.supabase.co';
 const SUPABASE_KEY =
@@ -17,8 +18,10 @@ export async function getFamilies() {
 }
 
 export async function deleteBunny(id) {
+    const response = await client.from('fuzzy_bunnies').delete().match({ id: id }).single();
     // delete a single bunny using the id argument
-    // return checkError(response);
+
+    return checkError(response);
 }
 
 export async function createBunny(bunny) {
