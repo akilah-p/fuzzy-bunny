@@ -30,7 +30,10 @@ function displayFamilies(families) {
             bunnyEl.textContent = bunny.name;
 
             bunnyEl.addEventListener('click', async () => {
-                await deleteBunny(bunny.id);
+                // await deleteBunny(bunny.id);
+                window.location.replace(`../bunnies`);
+
+
 
                 const updatedFamilies = await getFamilies();
 
