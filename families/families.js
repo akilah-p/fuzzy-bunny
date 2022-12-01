@@ -30,8 +30,8 @@ function displayFamilies(families) {
             bunnyEl.textContent = bunny.name;
 
             bunnyEl.addEventListener('click', async () => {
-                // await deleteBunny(bunny.id);
-                window.location.replace(`../bunnies`);
+                await deleteBunny(bunny.id);
+                // window.location.replace(`../bunnies`);
 
 
 
